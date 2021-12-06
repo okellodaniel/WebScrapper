@@ -32,21 +32,20 @@ def job_search():
 
             # ''')
             if unfamiliar_skill not in skills:
-                with open(f'posts/{index}') as f:
+                with open(f'posts/{index}.txt', 'w') as f:
                     f.write(f"Company Name: {company_namr.strip()}")
                     f.write(f"Skills Needed: {skills.strip()}")
                     f.write(f"More Info: {moreInfo}")
                     f.write(f"Publish Date: {publish_date.strip()}")
+                print(f'File {index} Created')
                 print(f"Company Name: {company_namr.strip()}")
                 print(f"Skills Needed: {skills.strip()}")
                 print(f"More Info: {moreInfo}")
                 print(' ')
                 print(f"Publish Date: {publish_date.strip()}")
 
-                print(' ')
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     while True:
         job_search()
         time_wait = 10
